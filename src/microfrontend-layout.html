@@ -1,0 +1,22 @@
+<single-spa-router>
+  <main>
+    <!--        <redirect from="/test3" to="/test2"> </redirect>-->
+    <nav>
+      <application name="@fangfang/navbar"></application>
+    </nav>
+    <route default>
+      <application name="@single-spa/welcome" loader="busyLoader"></application>
+    </route>
+    <route path="test">
+      <div class="application-test">
+        <application name="@Fangfang/single-spa-test"></application>
+      </div>
+      <div class="application-test2">
+        <application name="@fangfang/test2" props="a,b"></application>
+      </div>
+    </route>
+    <route path="test2">
+      <application name="@fangfang/test2" props="a,b"></application>
+    </route>
+  </main>
+</single-spa-router>
